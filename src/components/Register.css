@@ -1,0 +1,19 @@
+body{
+    margin-top: 0;
+}
+.user-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color:dimgrey;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #282c34;
+    padding: 15px 30px;
+  }
+  .heading{
+    color: white;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .home-content {
+  /*background-image: url('../public/Employee.jpg');*/
+ /* background-image: linear-gradient(to bottom, #e8198b 0%, #c7eafd 100%)!important;*/
+ background-image: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%);
+  background-size: contain; 
+  background-position: center; 
+  height: 84vh; /* full height of the viewport */
+    text-align: center;
+  }
+
+  
+  .home-content h1 {
+    color: #282c34;
+  }
+  
+  .home-content p {
+    font-size: 20px;
+  }
+  

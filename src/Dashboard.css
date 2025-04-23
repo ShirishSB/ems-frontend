@@ -1,0 +1,15 @@
+body{
+    background-color: #E3F2FD;
+}
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.nav-links a:hover{
+    color: black;
+    background-color: skyblue;
+    padding : 5px 5px;
+    border-radius: 5px;
+}

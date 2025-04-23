@@ -1,0 +1,34 @@
+.table-container {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-table th {
+    background-color: #374151;
+    color: white;
+    text-align: left;
+    padding: 12px;
+  }
+  
+  .custom-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .custom-table tr:nth-child(even) {
+    background-color: #f3f4f6;
+  }
+  
+  .custom-table tr:hover {
+    background-color: #e5e7eb;
+    transition: background-color 0.3s ease;
+  }
+  
