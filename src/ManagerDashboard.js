@@ -40,7 +40,7 @@ useEffect(() => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("http://localhost:8081/api/employee/getAll",{
+    fetch("https://ems-app-latest.onrender.com/api/employee/getAll",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",

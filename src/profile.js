@@ -33,7 +33,7 @@ const Profile = () => {
       }
 
       try {
-        const response = await axios.get(`http://localhost:8081/api/user/username/${username}`, {
+        const response = await axios.get(`https://ems-app-latest.onrender.com/api/user/username/${username}`, {
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}`,

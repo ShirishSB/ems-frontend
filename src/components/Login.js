@@ -15,7 +15,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-        const response = await axios.post("http://localhost:8081/auth/login", credentials);
+        const response = await axios.post("https://ems-app-latest.onrender.com/auth/login", credentials);
         console.log(response.data);
         const { token, roles} = response.data; // Extract token & roles
         localStorage.setItem("token", token);

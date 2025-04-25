@@ -16,7 +16,7 @@ const EmployeeDashboard = () => {
         console.error("No token found. User is not authenticated.");
         return;
       }
-      fetch(`http://localhost:8081/api/employee/get/${username}`)
+      fetch(`https://ems-app-latest.onrender.com/api/employee/get/${username}`)
         .then((res) => res.json())
         .then((data) => {
           if (data && Object.keys(data).length > 0) {

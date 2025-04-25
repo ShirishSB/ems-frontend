@@ -16,7 +16,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8081/api/user/register", user);
+            const response = await axios.post("https://ems-app-latest.onrender.com/api/user/register", user);
             setMessage(response.data.message);
             setTimeout(() => navigate("/login"), 2000); // Redirect to login after success
         } catch (error) {

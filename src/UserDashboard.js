@@ -52,7 +52,7 @@ const UserDashboard = () => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("http://localhost:8081/api/user/all",{
+    fetch("https://ems-app-latest.onrender.com/api/user/all",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const UserDashboard = () => {
     }
 
     try {
-        const response = await axios.delete(`http://localhost:8081/api/user/${id}`,{
+        const response = await axios.delete(`https://ems-app-latest.onrender.com/api/user/${id}`,{
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}` // Attach JWT token
@@ -121,7 +121,7 @@ const handleEditSave = async () => {
 
   try {
     const response = await axios.put(
-      `http://localhost:8081/api/user/${editUser.id}`,
+      `https://ems-app-latest.onrender.com/api/user/${editUser.id}`,
       editUser,
       {
         headers: {

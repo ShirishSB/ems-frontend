@@ -66,7 +66,7 @@ useEffect(() => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("http://localhost:8081/api/employee/getAll",{
+    fetch("https://ems-app-latest.onrender.com/api/employee/getAll",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -84,7 +84,7 @@ useEffect(() => {
     }
 
     try {
-        const response = await axios.delete(`http://localhost:8081/api/employee/delete/${id}`,{
+        const response = await axios.delete(`https://ems-app-latest.onrender.com/api/employee/delete/${id}`,{
           headers: {
             "Content-Type": "application/json",
             "Authorization": `Bearer ${token}` // Attach JWT token
@@ -129,7 +129,7 @@ const handleEditChange = (e) => {
 
 const handleEditSave = async () => {
   try {
-    const response = await fetch(`http://localhost:8081/api/employee/update/${editEmployee.id}`, {
+    const response = await fetch(`https://ems-app-latest.onrender.com/api/employee/update/${editEmployee.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
