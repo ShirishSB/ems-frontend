@@ -47,7 +47,7 @@ const EmployeeForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post("https://ems-frontend-theta-five.vercel.app/api/employee/create", employee,{
+            await axios.post("https://ems-app-latest.onrender.com/api/employee/create", employee,{
                 headers:{
                     "Authorization":`Bearer ${token}`
                 }

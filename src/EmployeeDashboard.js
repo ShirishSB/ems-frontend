@@ -17,7 +17,7 @@ const EmployeeDashboard = () => {
         console.error("No token found. User is not authenticated.");
         return;
       }
-      fetch(`https://ems-frontend-theta-five.vercel.app/employee/get/${username}`)
+      fetch(`https://ems-app-latest.onrender.com/employee/get/${username}`)
         .then((res) => res.json())
         .then((data) => {
           if (data && Object.keys(data).length > 0) {

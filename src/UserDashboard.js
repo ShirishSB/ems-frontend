@@ -52,7 +52,7 @@ const UserDashboard = () => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("https://ems-frontend-theta-five.vercel.app/api/user/all",{
+    fetch("https://ems-app-latest.onrender.com/api/user/all",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",

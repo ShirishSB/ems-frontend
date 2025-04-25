@@ -67,7 +67,7 @@ useEffect(() => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("https://ems-frontend-theta-five.vercel.app/api/employee/getAll",{
+    fetch("https://ems-app-latest.onrender.com/api/employee/getAll",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",
