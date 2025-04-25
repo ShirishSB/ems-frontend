@@ -21,6 +21,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import logo from "./images/back-to-home.png";
+import "./AdminDashboard.css";
 
 const UserDashboard = () => {
   const [users, setUsers] = useState([]);
@@ -148,7 +149,7 @@ const handleEditSave = async () => {
 
 
   return (
-   <div style={{ padding: "20px" }}>
+   <div className="admin-page" style={{ padding: "20px" }}>
       <div className="header">
       <button onClick={()=>navigate("/admin/dashboard")} style={{ background: "none", border: "none", cursor: "pointer" }}>
                     <img src={logo} alt="back to home" style={{ cursor: "pointer", width: 50, height: 50 }}/>
