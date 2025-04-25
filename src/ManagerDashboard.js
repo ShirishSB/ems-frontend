@@ -13,6 +13,7 @@ import {
 import logout from "./components/logout";
 import "./Dashboard.css";
 import "./Pagination.css";
+import "./AdminDashboard.css";
 
 
 const ManagerDashboard = () => {
@@ -55,7 +56,7 @@ useEffect(() => {
 
 
   return (
-   <div style={{ padding: "20px" }}>
+   <div className="admin-page" style={{ padding: "20px" }}>
       <nav className="navbar">
               <h3 className="heading">MANAGER DASHBOARD</h3>
               <div className="nav-links">

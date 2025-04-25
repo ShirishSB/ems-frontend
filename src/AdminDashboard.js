@@ -20,6 +20,7 @@ import { Edit, Delete } from "@mui/icons-material";
 import axios from "axios";
 import logout from "./components/logout";
 import "./Dashboard.css";
+import "./AdminDashboard.css";
 
 
 const AdminDashboard = () => {
@@ -66,7 +67,7 @@ useEffect(() => {
       console.error("No token found. User is not authenticated.");
       return;
     }
-    fetch("https://ems-app-latest.onrender.com/api/employee/getAll",{
+    fetch("https://ems-frontend-theta-five.vercel.app/api/employee/getAll",{
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -157,7 +158,7 @@ const handleEditSave = async () => {
 
 
   return (
-   <div style={{ padding: "20px" }}>
+   <div className="admin-page" style={{ padding: "20px" }}>
       <nav className="navbar">
         <h3 className="heading">EMPLOYEE MANAGEMENT DASHBOARD</h3>
         <div className="nav-links">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logout from "./components/logout";
 import {jwtDecode} from "jwt-decode";
+import "./AdminDashboard.css";
 
 const EmployeeDashboard = () => {
   const[emp,setEmp] = useState([]);
@@ -16,7 +17,7 @@ const EmployeeDashboard = () => {
         console.error("No token found. User is not authenticated.");
         return;
       }
-      fetch(`https://ems-app-latest.onrender.com/api/employee/get/${username}`)
+      fetch(`https://ems-frontend-theta-five.vercel.app/employee/get/${username}`)
         .then((res) => res.json())
         .then((data) => {
           if (data && Object.keys(data).length > 0) {
@@ -57,7 +58,7 @@ const EmployeeDashboard = () => {
 
 else{
   return (
-    <div style={{ textAlign: "center", padding: "50px"}}>
+    <div className="admin-page" style={{ textAlign: "center", padding: "50px"}}>
       {/* Navigation Bar */}
       <nav className="navbar">
         <h2 className="heading">Employee Dashboard</h2>
