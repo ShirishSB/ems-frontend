@@ -17,3 +17,13 @@ body{
     background-color:dimgrey;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+@media (max-width: 768px) {
+    .register-form{
+        width: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(135deg, #667eea, #764ba2);
+    }
+  }

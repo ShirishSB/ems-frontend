@@ -14,3 +14,16 @@ body{
     align-items: center;
     background:linear-gradient(135deg, #667eea, #764ba2);
 }
+@media (max-width: 768px) {
+    .form-body{
+        width: min-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background:linear-gradient(135deg, #667eea, #764ba2);
+    }
+    .responsive-form{
+        display: flex;
+        flex-direction: column;
+    }
+  }

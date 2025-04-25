@@ -54,7 +54,7 @@ const Login = () => {
                 <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <button type="submit"  style={{fontWeight:'bolder', backgroundColor:'Green', cursor: 'pointer', textDecoration: 'none'}} >Login</button>
                 </div>
-                <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                <div className="responsive-form" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <h4 style={{fontWeight:'bolder'}}>Don't have an account?&nbsp;</h4>
                 <a href="/user/register"
  style={{ color: 'white', cursor: 'pointer',fontWeight:'bolder', textDecoration: 'none'}} 
