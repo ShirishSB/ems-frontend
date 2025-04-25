@@ -38,4 +38,15 @@
   .home-content p {
     font-size: 20px;
   }
+
+  @media (max-width: 768px) {
+    .navbar{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .heading{
+      margin-left: 55px;
+    }
+  }
   
