@@ -151,7 +151,7 @@ const handleEditSave = async () => {
   return (
    <div className="admin-page" style={{ padding: "20px" }}>
       <div className="header">
-      <button onClick={()=>navigate("/admin/dashboard")} style={{ background: "none", border: "none", cursor: "pointer" }}>
+      <button id="admin-link" onClick={()=>navigate("/admin/dashboard")} style={{ background: "none", border: "none", cursor: "pointer" }}>
                     <img src={logo} alt="back to home" style={{ cursor: "pointer", width: 50, height: 50 }}/>
     </button>
       <h2>USER MANAGEMENT DASHBOARD</h2>
@@ -194,6 +194,7 @@ const handleEditSave = async () => {
                       {(
                         <>
                         <Button
+                      id="edit-button"
                       variant="contained"
                       color="primary"
                       onClick={() => handleEdit(user)}
@@ -202,6 +203,7 @@ const handleEditSave = async () => {
                       <Edit fontSize="small" />
                         </Button>
                           <Button
+                          id="delete-button"
                             variant="contained"
                             color="error"
                             onClick={() => handleDelete(user.id)}
@@ -288,15 +290,15 @@ const handleEditSave = async () => {
   </TextField>
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setEditUser(null)}>Cancel</Button>
-        <Button onClick={handleEditSave} variant="contained" color="primary">
+        <Button id="cancel-button" onClick={() => setEditUser(null)}>Cancel</Button>
+        <Button id="save-button" onClick={handleEditSave} variant="contained" color="primary">
           Update
         </Button>
       </DialogActions>
     </Dialog>
 
     <div className="pagination">
-  <button 
+  <button id="prev-button"
     disabled={currentPage === 1} 
     onClick={() => setCurrentPage(currentPage - 1)}
   >
@@ -304,7 +306,7 @@ const handleEditSave = async () => {
   </button>
 
   {Array.from({ length: totalPages }, (_, index) => (
-    <button 
+    <button id="current-page-button"
       key={index} 
       onClick={() => setCurrentPage(index + 1)}
       style={{ fontWeight: currentPage === index + 1 ? "bold" : "normal" }}
@@ -314,6 +316,7 @@ const handleEditSave = async () => {
   ))}
 
   <button 
+  id="next-button"
     disabled={currentPage >= totalPages} 
     onClick={() => setCurrentPage(currentPage + 1)}
   >

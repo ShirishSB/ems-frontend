@@ -41,9 +41,9 @@ const EmployeeDashboard = () => {
         <nav className="navbar">
           <h2 className="heading">Employee Dashboard</h2>
           <div className="nav-links">
-            <a href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
-            <a href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
-            <button
+            <a id="user-profile-link" href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
+            <a id="emp-register-link" href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
+            <button id="emp-dash-logout"
       onClick={logout} 
       style={{fontWeight:"bolder", cursor: "pointer", textDecoration: "none", padding: "8px 16px", backgroundColor: "#d32f2f", color: "white", borderRadius: "4px", display: "inline-block" }}
       >Logout</button>
@@ -63,9 +63,9 @@ else{
       <nav className="navbar">
         <h2 className="heading">Employee Dashboard</h2>
         <div className="nav-links">
-          <a href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
-          <a href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
-          <button
+          <a id="user-profile-link" href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
+          <a id="user-profile-link" href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
+          <button id="emp-dash-logout"
     onClick={logout} 
     style={{fontWeight:"bolder", cursor: "pointer", textDecoration: "none", padding: "8px 16px", backgroundColor: "#d32f2f", color: "white", borderRadius: "4px", display: "inline-block" }}
     >Logout</button>

@@ -162,10 +162,10 @@ const handleEditSave = async () => {
       <nav className="navbar">
         <h3 className="heading">EMPLOYEE MANAGEMENT DASHBOARD</h3>
         <div className="nav-links">
-          <a href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
-          <a href="/users" style={{textDecoration:"none",fontWeight:"bolder"}}>Users</a>
-          <a href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
-          <button
+          <a id="admin-profile-link" href="/user/profile" style={{textDecoration:"none",fontWeight:"bolder"}}>Profile</a>
+          <a id="users" href="/users" style={{textDecoration:"none",fontWeight:"bolder"}}>Users</a>
+          <a id="admin-empreg-link" href="/employee/register" style={{textDecoration:"none",fontWeight:"bolder"}}>Register</a>
+          <button id="admin-logout-button"
     onClick={logout} 
     style={{fontWeight:"bolder", cursor: "pointer", textDecoration: "none", padding: "8px 16px", backgroundColor: "#d32f2f", color: "white", borderRadius: "4px", display: "inline-block" }}
     >Logout</button>
@@ -208,7 +208,7 @@ const handleEditSave = async () => {
                     <TableCell>
                       {(
                         <>
-                        <Button
+                        <Button id="emp-edit-button"
                       variant="contained"
                       color="primary"
                       onClick={() => handleEdit(emp)}
@@ -217,6 +217,7 @@ const handleEditSave = async () => {
                       <Edit fontSize="small" />
                         </Button>
                           <Button
+                          id="emp-delete-button"
                             variant="contained"
                             color="error"
                             onClick={() => handleDelete(emp.id)}
@@ -320,8 +321,8 @@ const handleEditSave = async () => {
         />
       </DialogContent>
       <DialogActions>
-        <Button onClick={() => setEditEmployee(null)}>Cancel</Button>
-        <Button onClick={handleEditSave} variant="contained" color="primary">
+        <Button id="cancel" onClick={() => setEditEmployee(null)}>Cancel</Button>
+        <Button id="update" onClick={handleEditSave} variant="contained" color="primary">
           Update
         </Button>
       </DialogActions>
@@ -329,7 +330,7 @@ const handleEditSave = async () => {
 
 
     <div className="pagination">
-  <button 
+  <button id="prev"
     disabled={currentPage === 1} 
     onClick={() => setCurrentPage(currentPage - 1)}
   >
@@ -337,7 +338,7 @@ const handleEditSave = async () => {
   </button>
 
   {Array.from({ length: totalPages }, (_, index) => (
-    <button 
+    <button id="current"
       key={index} 
       onClick={() => setCurrentPage(index + 1)}
       style={{ fontWeight: currentPage === index + 1 ? "bold" : "normal" }}
@@ -346,7 +347,7 @@ const handleEditSave = async () => {
     </button>
   ))}
 
-  <button 
+  <button id="next"
     disabled={currentPage >= totalPages} 
     onClick={() => setCurrentPage(currentPage + 1)}
   >

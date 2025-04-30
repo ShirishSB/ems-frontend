@@ -71,17 +71,17 @@ const EmployeeForm = () => {
     return (<div>
         <form className="forms-body" onSubmit={handleSubmit}>
             <h2 className="form-title" style={{color:'black',fontWeight:'bolder'}}>Employee Registration</h2>
-            <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
-            <input type="email" name="email" placeholder="Email" onChange={handleChange} required />
-            <input type="text" name="age" placeholder="Age" onChange={handleChange} required />
-            <select name="gender" value={employee.gender}onChange={handleChange} required>
+            <input id="emp-name" type="text" name="name" placeholder="Name" onChange={handleChange} required />
+            <input id="emp-email" type="email" name="email" placeholder="Email" onChange={handleChange} required />
+            <input id="emp-age" type="text" name="age" placeholder="Age" onChange={handleChange} required />
+            <select id="emp-gender" name="gender" value={employee.gender}onChange={handleChange} required>
                 <option value="">Select</option>
                 <option value="Male">M</option>
                 <option value="Female">F</option>
                 <option value="Other">OTHER</option>
                 </select>
             {/* Department Selection */}
-        <select value={selectedDepartment} onChange={handleDepartmentChange} required>
+        <select id="emp-depart" value={selectedDepartment} onChange={handleDepartmentChange} required>
           <option value="">Select Department</option>
           {Object.keys(departments).map((department) => (
             <option key={department} value={department}>
@@ -92,6 +92,7 @@ const EmployeeForm = () => {
 
         {/* Sub-Department Selection */}
         <select
+        id="emp-subdepart"
           value={selectedSubDepartment}
           onChange={handleSubDepartmentChange}
           required
@@ -106,7 +107,7 @@ const EmployeeForm = () => {
             ))}
         </select>
         <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-            <button style={{backgroundColor:'green'}} type="submit">Submit</button>
+            <button id="emp-submit" style={{backgroundColor:'green'}} type="submit">Submit</button>
         </div>
         </form>
         </div>

@@ -31,23 +31,23 @@ const Register = () => {
             </button>
             <form className="register-form" style={{background:'linear-gradient(135deg, #667eea, #764ba2)'}} onSubmit={handleSubmit}>  
             <h2 style={{fontWeight:'bolder', color:'black'}} className="user-register">Sign Up</h2>
-                <input type="email" name="email" placeholder="username@mail.com" onChange={handleChange} required />
-                <input type="password" name="password" placeholder="password" onChange={handleChange} required />
-                <input type="text" name="age" placeholder="age" onChange={handleChange} required />
-            <select name="gender" onChange={handleChange} required>
+                <input id="register-email" type="email" name="email" placeholder="username@mail.com" onChange={handleChange} required />
+                <input id="register-password" type="password" name="password" placeholder="password" onChange={handleChange} required />
+                <input id="register-age" type="text" name="age" placeholder="age" onChange={handleChange} required />
+            <select id="register-gender" name="gender" onChange={handleChange} required>
                 <option value="">Select Gender</option>
                 <option value="Male">M</option>
                 <option value="Female">F</option>
                 <option value="Other">Other</option>
-                </select>
-            <select name="userType" onChange={handleChange}>
+            </select>
+            <select id="register-role" name="userType" onChange={handleChange}>
                 <option value="">Select Role</option>
                 <option value="ADMIN">Admin</option>
                 <option value="MANAGER">Manager</option>
                 <option value="EMPLOYEE">Employee</option>
             </select>
                 <div style={{display:'flex',alignItems:'center',justifyContent:'center'}}> 
-                    <button  style={{backgroundColor:'Green', fontWeight:'bolder'}} type="submit">Sign Up</button>
+                    <button id="register" style={{backgroundColor:'Green', fontWeight:'bolder'}} type="submit">Sign Up</button>
                 </div>
             </form>
         </div>

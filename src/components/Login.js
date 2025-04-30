@@ -49,14 +49,14 @@ const Login = () => {
             </button>
             <form className="form-body" onSubmit={handleSubmit}>
             <h2 className="form-login">Login</h2>
-                <input type="email" name="username" placeholder="username@mail.com" onChange={handleChange} required />
-                <input type="password" name="password" placeholder="password" onChange={handleChange} required />
+                <input id="login-email" type="email" name="username" placeholder="username@mail.com" onChange={handleChange} required />
+                <input id="login-password" type="password" name="password" placeholder="password" onChange={handleChange} required />
                 <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
-                <button type="submit"  style={{fontWeight:'bolder', backgroundColor:'Green', cursor: 'pointer', textDecoration: 'none'}} >Login</button>
+                <button id="login-button" type="submit"  style={{fontWeight:'bolder', backgroundColor:'Green', cursor: 'pointer', textDecoration: 'none'}} >Login</button>
                 </div>
                 <div className="responsive-form" style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
                 <h4 style={{fontWeight:'bolder'}}>Don't have an account?&nbsp;</h4>
-                <a href="/user/register"
+                <a id="signup-link" href="/user/register"
  style={{ color: 'white', cursor: 'pointer',fontWeight:'bolder', textDecoration: 'none'}} 
                 className="mt-4">Sign Up</a>
                 </div>
